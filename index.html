@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annu's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annu Fibin Developer Portfolio</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hey, I'm Annu! A passionate tech lover, web designer, and coding enthusiast. I love creating aesthetic websites and crafting digital experiences.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>A cool website I made using HTML, CSS, and JavaScript.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Another amazing project showcasing my skills.</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com">cloudpetal2011 @gmail.com
-        </a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Annu. All rights reserved.</p>
-    </footer>
+  <header>
+    <h1 class="rainbow-text">Annu Fibin</h1>
+  </header>
+
+  <section class="intro">
+    <h2>About Me</h2>
+    <p class="myname">Hi, I'm Annu.</p>
+    <p> <img src="images/download.jpg" alt="Annu's Photo" class="myimage"> I am a passionate high school student with a strong interest in IT and web development.
+      My journey into coding started with HTML and CSS, and I am now expanding my skills with JavaScript.
+      I enjoy front-end development and love creating aesthetic, user-friendly websites. I also explore problem-solving and UI design.
+     </p>
+  </section>
+
+  <section class="skills">
+    <h2 class="fadein">Skills & Technologies</h2>
+    <ul>
+      <li>Languages: HTML, CSS, JavaScript</li>
+
+      <li> Frameworks/Libraries: Basic experience with Bootstrap</li>
+
+      <li> Tools & Software: Visual Studio Code, GitHub, Sublime Text (for UI design ideas)</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2 class="fadein">Projects Showcase</h2>
+    <div class="project">
+      <h3>Personal Portfolio Website 🌐</h3>
+      <p>Description: A responsive website to showcase my skills and projects.</p>
+      <p>Tech Stack: HTML, CSS, JavaScript</p>
+      <p>My Role: Designed and developed the entire front-end.</p>
+      
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="fadein">Contact Information</h2>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:cloudpetal2011@gmail.com">cloudpetal2011@gmail.com</a></p>
+    <p><i class="fas fa-github"></i> GitHub: <a href="https://github.com/cloudpetal">https://github.com/cloudpetal</a></p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/annufibin">www.linkedin.com/in/annufibin</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Annu Fibin. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.fadein');
+  
+    function checkFadeIn() {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+  
+        if (isVisible) {
+          el.classList.add('show');
+        } else {
+          el.classList.remove('show');
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', checkFadeIn);
+    window.addEventListener('load', checkFadeIn);
+  </script>
+
 </body>
 </html>
